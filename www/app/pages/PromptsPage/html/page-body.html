@@ -1,0 +1,166 @@
+<div>
+
+  <!-- Tab 1 -->
+  <div pagespot="body-area" appuse="cards" group="_page_:tabs" item="welcome">
+    <div class="ui segment basic">
+      <h2 class="ui header">
+        <i class="home icon"></i>
+        <div class="content">
+          Prompt Demos
+        </div>
+      </h2>
+      <div class="ui cards">
+
+        <!-- Card ============ =============  -->
+        <div class="card">
+          <div class="content">
+            <div class="header">Hello World</div>
+            <div class="description">
+              A simple hello world that uses some of the prompt options.
+              <br />
+              <div class="ui button blue" pageaction="runHelloTest">Hello Test</div>
+            </div>
+          </div>
+          <div pageaction="gotoTab" tab="helloworld" class="ui bottom attached icon button basic blue ">
+            <i class="up arrow icon"></i>
+            Open that tab
+          </div>
+        </div>
+
+
+
+        <!-- Card ============ =============  -->
+        <div class="card">
+          <div class="content">
+            <div class="header">Prompt Options</div>
+            <div class="description">
+              More about the prompt available with the prompt functions.
+            </div>
+          </div>
+          <div pageaction="gotoTab" tab="promptoptions" class="ui bottom attached icon button basic blue ">
+            <i class="up arrow icon"></i>
+            Open that tab
+          </div>
+        </div>
+
+
+<!-- Card ============ =============  -->
+<div class="card">
+  <div class="content">
+    <div class="header">Prompt Forms</div>
+    <div class="description">
+      Prompt using form detail for a quick popup form.
+    </div>
+  </div>
+  <div pageaction="gotoTab" tab="forms" class="ui bottom attached icon button basic blue ">
+    <i class="up arrow icon"></i>
+    Open that tab
+  </div>
+</div>
+
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- Tab -->
+  <!-- =================== =================== =================== -->
+  <div appuse="cards" group="_page_:tabs" item="helloworld" class="hidden">
+    <div rem__pagespot="hello-world:doc-content" class="ui segment basic">
+
+      <div class="ui segment basic">
+        <h2 class="ui header">
+          <i class="home icon"></i>
+          <div class="content">
+            Hello World Demos
+          </div>
+        </h2>
+        <div>
+            <p>Simple demos to show how they work</p>
+          
+          
+          <h3>Alert Demo</h3>
+          <code><pre>
+            alert("Alert is new.  Now has a title and types (confirm,info,warn,error)", "Now with a title and type!", 'i') 
+            </pre></code>
+            <hr />
+            <h3>Input Demo</h3>
+            <code><pre>
+  ThisApp.input("What is your name?", "Your Name", "Say Hello", "Bob")
+    .then(function (theValue) {
+        if (!(theValue)) { return };
+        alert("Hello " + theValue, "Nice to meet you")
+    })
+            </pre></code>
+            <hr />
+            <h3>Confirm Demo</h3>
+            <code><pre>
+ThisApp.confirm("Are you sure?", "Checking to see")
+  .then(function (theIsYes) {
+      alert("You clicked " + (theIsYes ? "Yes" : "No"), "Your Confirmation");
+  })
+            </pre></code>
+    
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- =================== =================== =================== -->
+  <!-- Tab End -->
+
+
+  <!-- Tab -->
+  <!-- =================== =================== =================== -->
+  <div appuse="cards" group="_page_:tabs" item="promptoptions" class="hidden">
+    <div pagespot="promptoptions:doc-content" class="ui segment basic">
+      <h3>Prompt Options</h3>
+
+      <pre>
+ThisApp.alert('text','optional title', 'type').then(...);
+</pre>
+      <br />
+      The types are as follows, which control the icon used:<ol>
+        <li>c - confirm</li>
+        <li>i - info</li>
+        <li>w - warning</li>
+        <li>e - error</li>
+      </ol>
+      <hr />
+      
+<pre>
+ThisApp.confirm('text','optional title').then(function(theIsYes){});
+</pre>
+      <hr />
+<pre>
+ThisApp.input('text','optional title', 'optional button text', 'optional default value').then(function(theTextValue){});
+</pre>
+      <hr />
+<pre>
+ThisApp.prompt({
+"all":"kinds of options here, see video and reference for various usages"
+}).then(...);
+</pre>
+      <hr />
+      <h3>Advanced Prompting ..</h3>
+      Here we will init and show a form using the prompting system.  Includes validation.
+      <pre>
+show prompts usage here.
+      </pre>
+    </div>
+  </div>
+  <!-- =================== =================== =================== -->
+  <!-- Tab End -->
+
+
+
+</div>
